@@ -2,7 +2,7 @@
 
 {% block content %}
   {% if car_list %}
-    <table>
+    <table class="table table-striped">
     <thead>
       <tr>
         <th>ID</th>
@@ -17,12 +17,12 @@
           <td>{{ car.model }}</td>
           <td>{{ car.manufacturer.name }}</td>
         </tr>
-    </tbody>
       {% empty %}
         <tr>
           <td>No cars available</td>
         </tr>
     {% endfor %}
+    </tbody>
     </table>
   {% endif %}
 {% endblock %}
